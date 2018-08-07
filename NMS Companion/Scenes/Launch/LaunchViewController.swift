@@ -9,5 +9,9 @@
 import UIKit
 
 class LaunchViewController: BaseViewController {
-
+    override func viewDidLoad() {
+        FirebaseContext.shared.readAndStoreElements { (success) in
+            
+        }
+    }
 }

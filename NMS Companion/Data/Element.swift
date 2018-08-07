@@ -16,8 +16,8 @@ class Element: Object, Codable {
     var summary: String?
     var title: String?
     
-    convenience init(snapshot: DataSnapshot) throws {
-        self.init()
-        
-    }
+//    convenience init(snapshot: DataSnapshot) throws {
+//        self.init()
+//        
+//    }
 }

@@ -9,24 +9,23 @@
 import Foundation
 import Firebase
 
-let shared: FirebaseContext = FirebaseContext()
-
 class FirebaseContext: NSObject {
-    var ref = Database.database().reference()
+    static let shared: FirebaseContext = FirebaseContext()
+    private var db = Firestore.firestore()
     
     override init() {
         
     }
     
     func readAndStoreElements(completion: @escaping (Bool) -> ()) {
-        ref.child(Constants.Firebase.Elements).observeSingleEvent(of: .value) { (snapshot) in
-            guard let value = snapshot.value as? NSDictionary else {
-                completion(false)
-                return
-            }
-            
-            
+        db.collection(Constants
+            .Firebase.Elements).document(Constants
+                .Firebase.Elements).getDocument(completion: { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    }else {
+                        print("\(querySnapshot!.data().debugDescription))")
+                    }
+                })
         }
-    }
-    
 }

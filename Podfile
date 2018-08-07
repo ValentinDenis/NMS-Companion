@@ -11,6 +11,5 @@ target 'NMS Companion' do
   pod 'Alamofire'
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Core'
-  pod 'Firebase/Database'
-
+  pod 'Firebase/Firestore'
 end
