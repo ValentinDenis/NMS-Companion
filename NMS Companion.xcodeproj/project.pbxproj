@@ -91,7 +91,6 @@
 				35B79699211901C3007DCE23 /* Common */,
 				35B7968E21190106007DCE23 /* Home */,
 				35B7969221190139007DCE23 /* Launch */,
-				35B7968F2119010B007DCE23 /* Resources */,
 				35B796A6211906CF007DCE23 /* Utils */,
 			);
 			path = Scenes;
@@ -143,13 +142,6 @@
 				35B7969C211901E3007DCE23 /* HomeViewController.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		35B7968F2119010B007DCE23 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		35B7969221190139007DCE23 /* Launch */ = {
